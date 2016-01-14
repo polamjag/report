@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+$for(author-meta)$
+  <meta name="author" content="$author-meta$">
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$">
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+  <style type="text/css" media="print">
+    header {
+      page-break-after: always;
+      margin-top: 40%;
+    }
+    nav.toc {
+      page-break-after: always;
+    }
+  </style>
+  <style type="text/css" media="all">
+    body {
+      line-height: 1.6;
+      font-family: serif;
+      font-weight: 300;
+      font-size: 10pt;
+    }
+    header {
+      text-align: center;
+      font-weight: normal;
+      font-family: HelveticaNeue, 'Hiragino Sans W5', 'Hiragino Kaku Gothic Pro W3', 'IPAexGothic', 'IPAPGothic', 'Migu 1C', sans-serif;
+    }
+    header h1, header h2, header h3 {
+      font-weight: normal;
+    }
+    header .date {
+      font-size: .9em;
+    }
+
+    nav.toc {
+      font-family: HelveticaNeue, 'Hiragino Sans W3', 'Hiragino Kaku Gothic Pro W3', 'IPAexGothic', 'IPAPGothic', 'Migu 1C', sans-serif;
+      font-weight: 300;
+    }
+    nav.toc ul {
+      font-size: .95em;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: HelveticaNeue, 'Hiragino Sans W5', sans-serif;
+      font-weight: 500;
+      margin-top: 1em;
+      margin-bottom: .3em;
+    }
+    pre {
+      line-height: 1.1;
+      margin: .5em 0;
+    }
+    img {
+      max-width: 100%;
+    }
+    code {
+      line-height: 1.2;
+    }
+    pre code {
+      border: 1px solid #888;
+      display: inline-block;
+      border-radius: 10px;
+      padding: 10px;
+      word-break: break-all;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    p code {
+      font-size: .93em;
+    }
+    h1 {
+      font-size: 1.4em;
+    }
+    h2 {
+      font-size: 1.15em;
+    }
+    h3 {
+      font-size: 1em;
+    }
+    table {
+      border-spacing: 0;
+      border: 2px solid #666;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: .2em .6em;
+    }
+    dl dt {
+    }
+    dl dd {
+      font-size: .8em;
+    }
+    dd + dt {
+      margin-top: .7em;
+    }
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+    p {
+      margin: .5em 0;
+    }
+  </style>
+$if(quotes)$
+  <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
+$endif$
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+$if(math)$
+  $math$
+$endif$
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+$if(title)$
+<header>
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<h1 class="subtitle">$subtitle$</h1>
+$endif$
+$for(author)$
+<h2 class="author">$author$</h2>
+$endfor$
+$if(date)$
+<h3 class="date">$date$</h3>
+$endif$
+</header>
+$endif$
+$if(toc)$
+<nav id="$idprefix$TOC" class="toc">
+  <h2>Table of contents</h2>
+$toc$
+</nav>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+</body>
+</html>
