@@ -13,7 +13,7 @@ $endif$
   <style type="text/css" media="print">
     header {
       page-break-after: always;
-      margin-top: 40%;
+      margin-top: 15em;
     }
     nav.toc {
       page-break-after: always;
