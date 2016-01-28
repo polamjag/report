@@ -61,10 +61,12 @@ $endif$
     }
     code {
       line-height: 1.2;
+      font-family: Ricty, Inconsolata, Menlo, Consolas, monospace;
     }
     pre code {
       border: 1px solid #888;
       display: inline-block;
+      font-size: .85em;
       border-radius: 10px;
       padding: 10px;
       word-break: break-all;
