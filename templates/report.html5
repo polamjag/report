@@ -106,7 +106,7 @@ $endif$
       text-decoration: none;
     }
     p {
-      margin: .5em 0;
+      margin: .5em 0 .8em 0;
     }
   </style>
 $if(quotes)$
